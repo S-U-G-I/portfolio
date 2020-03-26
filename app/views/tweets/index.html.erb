@@ -1,5 +1,19 @@
 <div class="container">
   <div class="text-center my-4">
-<h1>新規投稿</h1>
+  <h1>新規投稿</h1>
+    <div class="row">
+      <% @tweets.each do |t| %>
+        <div class=" card-deck col-sm-4">
+          <div class="card my-3" style="width: 18rem">
+            <img src=<%= "#{t.img}" %> class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">ユーザーネーム<h5>
+              <p><%= "#{t.tweet}" %></p>
+              <%= link_to  "詳細", tweet_path(t), method: :get, class: "btn btn-primary" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
