@@ -7,7 +7,7 @@
           <div class="card my-3" style="width: 18rem">
             <img src=<%= "#{t.img}" %> class="card-img-top">
             <div class="card-body">
-              <h5 class="card-title">ユーザーネーム<h5>
+              <h5 class="card-title"><%=link_to "#{t.user.name}", user_path(t.user.id), method: :get %><h5>
               <p><%= "#{t.tweet}" %></p>
               <%= link_to  "詳細", tweet_path(t), method: :get, class: "btn btn-primary" %>
             </div>
