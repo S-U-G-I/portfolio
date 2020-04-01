@@ -2,5 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root "tweets#index"
   resources :users, only: [:show]
-  resources :tweets
+  resources :tweets do
+    resources :comments, only: [:create, :destroy]
+  end
 end
