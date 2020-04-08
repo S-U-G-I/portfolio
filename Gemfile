@@ -18,6 +18,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
+gem "rails-i18n"
 gem "devise"
 gem 'devise-i18n'
 gem 'devise-i18n-views'

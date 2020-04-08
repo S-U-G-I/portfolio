@@ -18,16 +18,18 @@
     </div><br>
 
     <h1>投稿一覧</h1>
-    <% @user.tweets.each do |u| %>
-    <div class=" card-deck col-sm-4">
-      <div class="card my-3" style="width: 18rem">
-        <img src=<%= "#{u.img}" %> class="card-img-top">
-        <div class="card-body">
-          <p><%= "#{u.tweet}" %></p>
-          <%= link_to  "詳細", tweet_path(u), method: :get, class: "btn btn-primary" %>
+    <div class="row">
+      <% @user.tweets.each do |u| %>
+      <div class=" card-deck col-sm-4">
+        <div class="card my-3" style="width: 18rem">
+          <img src=<%= "#{u.img}" %> class="card-img-top">
+          <div class="card-body">
+            <p><%= "#{u.tweet}" %></p>
+            <%= link_to  "詳細", tweet_path(u), method: :get, class: "btn btn-primary" %>
+          </div>
         </div>
       </div>
+      <% end %>
     </div>
-    <% end %>
   </div>
 </div>
