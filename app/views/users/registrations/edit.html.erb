@@ -1,12 +1,5 @@
-<h2><%= t('.title', resource: resource.model_name.human) %></h2>
-
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
 <%= render "devise/shared/error_messages", resource: resource %>
-
-<div class="field">
-  <%= f.label :name %><br />
-  <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
-</div>
 
 <div class="field">
   <%= f.label :email %><br />
@@ -29,16 +22,6 @@
 <div class="field">
   <%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-</div>
-
-<div class="field">
-  <%= f.label :thumbnail %><br />
-  <%= f.file_field :thubmnail, autofocus: true %>
-</div>
-
-<div class="field">
-  <%= f.label :introduction %><br />
-  <%= f.text_field :introduction, autofocus: true, autocomplete: "introduction" %>
 </div>
 
 <div class="field">
