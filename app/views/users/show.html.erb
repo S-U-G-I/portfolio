@@ -3,6 +3,20 @@
     <%= image_tag "#{@user.thumbnail}" %>
     <h2>ユーザー名:<%= "#{@user.name}" %></h2>
     <h3>自己紹介:<%= "#{@user.introduction}" %></h3><br>
+    <div id="follow">
+      <%= link_to following_user_path(@user.id) do %>
+      <h5 style="color: black;">フォロー:<%= @user.following.count %></h5>
+      <% end %>
+    </div>
+    <div id="follower">
+      <%= link_to followers_user_path(@user.id) do %>
+      <h5 style="color: black;">フォロワー:<%= @user.followers.count %></h5>
+      <% end %>
+    </div>
+    <div>
+      <%= render "users/follow_shared/follow_form" %>
+    </div><br>
+
     <h1>投稿一覧</h1>
     <% @user.tweets.each do |u| %>
     <div class=" card-deck col-sm-4">

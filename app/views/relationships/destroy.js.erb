@@ -1,0 +1,2 @@
+$("#follow_form").html("<%= j(render("/users/follow_shared/follow")) %>");
+$("#follower").html('<h5 style= color: black;><a href="<%= @user.id %>/followers">フォロワー:<%= @user.followers.count %></a></h5>');
