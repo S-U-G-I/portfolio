@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     patch 'profile_update', to: 'users/registrations#profile_update', as: 'profile_update'
   end
   root "tweets#index"
-  resources :users, only: [:show] do
+  resources :users, only: [:index, :show] do
     member do
       get :following, :followers
     end
