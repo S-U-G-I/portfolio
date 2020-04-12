@@ -24,6 +24,7 @@ gem 'devise-i18n'
 gem 'devise-i18n-views'
 gem 'carrierwave'
 gem 'rmagick', "~> 4.1.0"
+gem 'sprockets-rails'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do

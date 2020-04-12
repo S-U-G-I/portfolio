@@ -1,19 +1,21 @@
+<%= javascript_include_tag "tweet.js" %>
 <div class="container">
   <%= form_for @tweet do |f| %>
-    <h1>投稿する</h1>
-  
-    <div class="field">
-      <p>画像</p>
-      <%= f.file_field :img %>
-    </div><br>
-    
-    <div class="field">
-      <p>呟き</p>
-      <%= f.text_field :tweet %>
-    </div></br>
+  <h1>投稿する</h1>
 
-    <%= f.submit "投稿" %>
-    
-    </div>
- 
- <% end %>
+  <div class="field">
+    <p>画像</p>
+    <%= f.file_field :img, id: "file" %><br>
+    <img id="file-preview">
+  </div><br>
+
+  <div class="field">
+    <p>呟き</p>
+    <%= f.text_field :tweet %>
+  </div></br>
+
+  <%= f.submit "投稿" %>
+
+</div>
+
+<% end %>
