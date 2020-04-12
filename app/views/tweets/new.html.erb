@@ -1,8 +1,8 @@
 <%= javascript_include_tag "tweet.js" %>
 <div class="container">
-  <%= form_for @tweet do |f| %>
   <h1>投稿する</h1>
-
+  <%= render 'error_messages'%>
+  <%= form_for @tweet do |f| %>
   <div class="field">
     <p>画像</p>
     <%= f.file_field :img, id: "file" %><br>

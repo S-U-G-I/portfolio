@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
       flash[:success] = "コメントしました"
       redirect_back(fallback_location: tweet_path(@tweet.id))
     else
-      flash[:danger] = "コメントできません"
+      flash[:danger] = "コメントを入力してください"
       redirect_back(fallback_location: tweet_path(@tweet.id))
     end 
   end
