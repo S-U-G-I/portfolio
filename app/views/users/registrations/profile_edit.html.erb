@@ -1,8 +1,10 @@
+<%= javascript_include_tag "tweet.js" %>
 <%= form_for current_user, url: {action: 'profile_update'} do |f| %>
 
 <div class="field">
   <%= f.label :thumbnail %><br />
-  <%= f.file_field :thumbnail %>
+  <%= f.file_field :thumbnail, id: "file" %><br>
+  <img id="file-preview">
 </div>
 
 <div class="field">
