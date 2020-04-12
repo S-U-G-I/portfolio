@@ -14,9 +14,15 @@ class TweetsController < ApplicationController
   end
 
   def create
+    @tweets = Tweet.new
     @tweet = current_user.tweets.new(tweet_params)
-    @tweet.save
-    redirect_to root_path
+    begin
+      @tweet.save!
+      flash[:notice] = "投稿しました"
+      redirect_to root_path
+    rescue
+      render :new
+    end
   end
 
   def destroy

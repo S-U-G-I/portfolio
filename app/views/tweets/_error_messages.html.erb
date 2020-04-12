@@ -1,0 +1,10 @@
+<% if @tweet.errors.any? %>
+<p class="text-left alert alert-danger" role="alert"><%= @tweet.errors.count %>つのエラーがあります。</p>
+<% @tweet.errors.full_messages.each do |message| %>
+<ul>
+  <li class="text-left text-danger">
+    <p><%= message %></p>
+  </li>
+</ul>
+<% end %>
+<% end %>
