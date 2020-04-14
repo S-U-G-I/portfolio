@@ -1,25 +1,29 @@
 <%= javascript_include_tag "tweet.js" %>
-<%= form_for current_user, url: {action: 'profile_update'} do |f| %>
+<div class="container">
+  <div class="text-center my-4">
+    <%= form_for current_user, url: {action: 'profile_update'} do |f| %>
 
-<div class="field">
-  <%= f.label :thumbnail %><br />
-  <%= f.file_field :thumbnail, id: "file" %><br>
-  <img id="file-preview">
+    <div class="field">
+      <%= f.label :thumbnail %><br />
+      <%= f.file_field :thumbnail, id: "file" %><br>
+      <img id="file-preview">
+    </div><br>
+
+    <div class="field">
+      <%= f.label :name %><br />
+      <%= f.text_field :name %>
+    </div>
+
+    <div class="field">
+      <%= f.label :introduction %><br />
+      <%= f.text_field :introduction %>
+    </div><br>
+
+    <div class="actions">
+      <%= f.submit "更新" %>
+    </div>
+    <% end %>
+
+    <%= link_to  "パスワード、アドレスを変更する", edit_user_registration_path %>
+  </div>
 </div>
-
-<div class="field">
-  <%= f.label :name %><br />
-  <%= f.text_field :name %>
-</div>
-
-<div class="field">
-  <%= f.label :introduction %><br />
-  <%= f.text_field :introduction %>
-</div><br>
-
-<div class="actions">
-  <%= f.submit "更新" %>
-</div>
-<% end %>
-
-<%= link_to  "パスワード、アドレスを変更する", edit_user_registration_path %>

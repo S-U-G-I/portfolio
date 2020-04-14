@@ -15,6 +15,10 @@
  */
  @import "bootstrap";
 
+ .pagination {
+  justify-content: center;
+}
+
  .alert-notice {
   @extend .alert-success;
 }
