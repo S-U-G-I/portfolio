@@ -22,6 +22,9 @@ gem "rails-i18n"
 gem "devise"
 gem 'devise-i18n'
 gem 'devise-i18n-views'
+gem 'kaminari'
+gem 'kaminari-bootstrap'
+gem 'bootstrap4-kaminari-views'
 gem 'carrierwave'
 gem 'rmagick', "~> 4.1.0"
 gem 'sprockets-rails'

@@ -1,7 +1,7 @@
 <div class="container">
   <div class="text-center my-4">
     <img src=<%= "#{@tweet.img}" %>>
-    <h5 class="card-title"><%=link_to "#{@tweet.user.name}", user_path(@tweet.user.id), method: :get %><h5>
+    <h5 class="card-title"><%=link_to "#{@tweet.user.name}", user_path(@tweet.user.id), method: :get, class: "EDITLink" %><h5>
         <p><%= "#{@tweet.tweet}" %></p>
         <% if user_signed_in? && @tweet.user_id==current_user.id %>
         <%= button_to "削除する", tweet_path(@tweet.id), method: :delete, data: {confirm: "削除しますか？"}, class: "btn btn-danger" %>
@@ -11,7 +11,7 @@
         <div class="row">
           <% @tweet.comments.each do |c| %>
           <div class="col-sm-3">
-            <%= link_to  "#{c.user.name}", user_path(c.user.id), method: :get %>
+            <%= link_to  "#{c.user.name}", user_path(c.user.id), method: :get, class: "EDITLink" %>
           </div>
           <div class="col-sm-3">
             <p><%= c.content %></p>

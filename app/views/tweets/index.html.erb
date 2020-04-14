@@ -9,11 +9,13 @@
           <div class="card-body">
             <h5 class="card-title"><%=link_to "#{t.user.name}", user_path(t.user.id), method: :get, class: "EDITLink" %><h5>
                 <p><%= "#{t.tweet}" %></p>
-                <%= link_to  "詳細", tweet_path(t), method: :get, class: "btn btn-primary" %>
+                <p><%= link_to  "詳細", tweet_path(t), method: :get, class: "btn btn-primary" %></p>
+                <p><%= t.created_at.strftime('%Y年%m月%d日') %></p>
           </div>
         </div>
       </div>
       <% end %>
     </div>
+    <%= paginate @tweets %>
   </div>
 </div>

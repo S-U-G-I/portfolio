@@ -1,0 +1,6 @@
+ja:
+ activerecord:
+  attributes:
+   tweet:
+    tweet: "呟き"
+    img:   "画像"
