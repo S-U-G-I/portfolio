@@ -30,9 +30,9 @@ class ThumbnailUploader < CarrierWave::Uploader::Base
   # end
 
   # Create different versions of your uploaded files:
-  # version :thumb do
-  #   process resize_to_fit: [50, 50]
-  # end
+   version :thumb do
+     process resize_to_fit: [50, 50]
+   end
   #上限変更
   process :resize_to_limit => [700, 700]
   #JPGで保存

@@ -2,16 +2,13 @@
   <div class="text-center my-4">
     <%= image_tag "#{@user.thumbnail}" %>
     <h2>ユーザー名:<%= "#{@user.name}" %></h2>
-    <h3>自己紹介:<%= "#{@user.introduction}" %></h3><br>
+    <h3>自己紹介:<%= "#{@user.introduction}" %></h3>
+
     <div id="follow">
-      <%= link_to following_user_path(@user.id) do %>
-      <h5 style="color: black;">フォロー:<%= @user.following.count %></h5>
-      <% end %>
+      <h5><%= link_to "フォロー:#{@user.following.count}", following_user_path(@user), class: "EDITLink"%></h5>
     </div>
     <div id="follower">
-      <%= link_to followers_user_path(@user.id) do %>
-      <h5 style="color: black;">フォロワー:<%= @user.followers.count %></h5>
-      <% end %>
+      <h5><%= link_to "フォロワー:#{@user.followers.count}", followers_user_path(@user), class: "EDITLink"%></h5>
     </div>
     <div>
       <%= render "users/follow_shared/follow_form" %>
@@ -24,9 +21,9 @@
         <div class="card my-3" style="width: 18rem">
           <img src=<%= "#{t.img}" %> class="card-img-top">
           <div class="card-body">
-            <p><%= "#{t.tweet}" %></p>
+            <h5><%= "#{t.tweet}" %></h5>
             <p><%= link_to  "詳細", tweet_path(t), method: :get, class: "btn btn-primary" %></p>
-            <p><%= t.created_at.strftime('%Y年%m月%d日') %></p>
+            <h5><%= t.created_at.strftime('%Y年%m月%d日') %></h5>
           </div>
         </div>
       </div>
