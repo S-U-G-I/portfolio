@@ -1,12 +1,18 @@
 class TweetsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
+
   def index
     @tweets = Tweet.all.order(id: :desc).page(params[:page]).per(9)
   end
 
   def show
-    @tweet = Tweet.find(params[:id])
-    @comments = @tweet.comments
-    @comment = Comment.new
+    begin
+      @tweet = Tweet.find(params[:id])
+      @comments = @tweet.comments
+      @comment = Comment.new
+    rescue
+      flash[:danger] = "ツイートが見つかりません"
+    end  
   end
 
   def new

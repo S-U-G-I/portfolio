@@ -25,6 +25,8 @@ gem 'devise-i18n-views'
 gem 'kaminari'
 gem 'kaminari-bootstrap'
 gem 'bootstrap4-kaminari-views'
+gem 'sass-rails', '~> 5.0'
+gem 'honoka-rails', '>= 3.3.6.3'
 gem 'carrierwave'
 gem 'rmagick', "~> 4.1.0"
 gem 'sprockets-rails'

@@ -15,5 +15,7 @@
 //= require turbolinks
 //= require jquery3
 //= require popper
+//= require imgLiquid-min
+//= require bootstrap.min
 //= require_tree .
 
