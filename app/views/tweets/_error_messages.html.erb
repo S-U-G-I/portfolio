@@ -1,5 +1,4 @@
   <% if @tweet.errors.any? %>
-  <p class="text-center alert alert-danger" role="alert"><%= @tweet.errors.count %>つのエラーがあります。</p>
   <% @tweet.errors.full_messages.each do |message| %>
   <div class="text-center text-danger">
     <p><%= message %></p>
