@@ -30,6 +30,7 @@ gem 'honoka-rails', '>= 3.3.6.3'
 gem 'carrierwave'
 gem 'rmagick', "~> 4.1.0"
 gem 'sprockets-rails'
+gem 'faker'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do

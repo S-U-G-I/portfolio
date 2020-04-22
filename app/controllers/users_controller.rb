@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  class UserNotFoundError < StandardError; end
   def index
     @users = User.all.order(id: :desc).page(params[:page]).per(12)
   end

@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :tweets, dependent: :destroy
   validates :name, presence: true
+  validates :introduction, presence: true, length: { maximum: 100 }
   mount_uploader :thumbnail, ThumbnailUploader
 
   has_many :following_relationships, foreign_key: "follower_id", class_name: "Relationship",  dependent: :destroy

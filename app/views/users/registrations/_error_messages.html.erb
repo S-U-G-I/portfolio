@@ -1,0 +1,8 @@
+  <% if current_user.errors.any? %>
+  <p class="text-center alert alert-danger" role="alert"><%= current_user.errors.count %>つのエラーがあります。</p>
+  <% current_user.errors.full_messages.each do |message| %>
+  <div class="text-center text-danger">
+    <p><%= message %></p>
+  </div>
+  <% end %>
+  <% end %>
