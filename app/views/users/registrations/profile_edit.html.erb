@@ -1,6 +1,7 @@
 <%= javascript_include_tag "tweet.js" %>
 <div class="container">
   <div class="text-center my-4">
+    <%= render 'error_messages'%>
     <%= form_for current_user, url: {action: 'profile_update'} do |f| %>
 
     <div class="field">
@@ -16,7 +17,7 @@
 
     <div class="field">
       <h4><%= f.label :introduction %></h4>
-      <%= f.text_field :introduction %>
+      <%= f.text_field :introduction, class: "introduction" %>
     </div><br>
 
     <div class="actions">

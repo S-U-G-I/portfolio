@@ -8,9 +8,12 @@
           <%= image_tag t.img.url, class: "card-img-top" %>
           <div class="card-body">
             <h5 class="card-title">
+              <% if t.user.thumbnail.blank? %>
+              <%= image_tag "thumbnail_default.jpg" %>
+              <% else %>
               <%= image_tag  t.user.thumbnail.url(:thumb) %>
+              <% end %>
               <%=link_to "#{t.user.name}", user_path(t.user.id), method: :get, class: "EDITLink" %><h5>
-                <p><%= "#{t.tweet}" %></p>
                 <p><%= link_to  "詳細", tweet_path(t), method: :get, class: "btn btn-primary" %></p>
                 <p><%= t.created_at.strftime('%Y年%m月%d日') %></p>
           </div>
