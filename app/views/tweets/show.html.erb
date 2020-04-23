@@ -3,7 +3,7 @@
     <%= image_tag  "#{@tweet.img}" %>
     <h5 class="card-title"><br>
       <% if @tweet.user.thumbnail.blank? %>
-      <%= image_tag "thumbnail_default.jpg" %>
+      <%= image_tag "top/thumbnail_default.jpg" %>
       <% else %>
       <%= image_tag  @tweet.user.thumbnail.url(:thumb) %>
       <% end %>

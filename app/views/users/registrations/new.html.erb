@@ -2,8 +2,8 @@
   <div class="text-center my-4">
     <h2><%= t('.sign_up') %></h2><br>
 
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= devise_error_messages %>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 
     <div class="field">
       <h4><%= f.label :name %></h4>

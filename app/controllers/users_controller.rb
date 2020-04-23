@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  
   def index
     @users = User.all.order(id: :desc).page(params[:page]).per(12)
   end
