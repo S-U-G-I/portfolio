@@ -1,6 +1,6 @@
 class TweetsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
-
+  before_action :authenticate_user!, except: [:top, :index, :show]
+  
   def index
     @tweets = Tweet.all.order(id: :desc).page(params[:page]).per(9)
   end
@@ -25,7 +25,7 @@ class TweetsController < ApplicationController
     begin
       @tweet.save!
       flash[:notice] = "投稿しました"
-      redirect_to root_path
+      redirect_to tweets_path
     rescue
       render :new
     end

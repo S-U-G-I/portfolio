@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="jumbotron text-center my-4">
+    <h1 class="display-4">ツーリングドライ部とは？</h1><br>
+    <p class="lead">バイクや車が好きな方達の交流のために作成した投稿アプリとなります。</p>
+    <p class="lead">お気に入りの自分の愛車を紹介したり</p>
+    <div class="row">
+      <div class="col my-4">
+        <%= image_tag  "top/top8.JPG" %>
+        <%= image_tag  "top/top9.JPG" %>
+        <%= image_tag  "top/top10.JPG" %>
+      </div>
+    </div>
+    <p class="lead">ツーリングやドライブの思い出や</p>
+    <div class="row">
+      <div class="col my-4">
+        <%= image_tag  "top/top11.JPG" %>
+        <%= image_tag  "top/top12.JPG" %>
+        <%= image_tag  "top/top13.JPG" %>
+      </div>
+    </div>
+    <p class="lead">お店の紹介なんかもしちゃったりしてください。</p>
+    <div class="row">
+      <div class="col my-4">
+        <%= image_tag  "top/top1.JPG" %>
+        <%= image_tag  "top/top2.JPG" %>
+        <%= image_tag  "top/top6.jpg" %>
+      </div>
+    </div>
+    <p class="lead">バイク、車が好きな方なら大歓迎です！</p>
+    <p class="lead">あなたも入部してみませんか？</p>
+    <div class="row justify-content-center">
+      <div class="col-2">
+        <%= button_to  "入部する", new_user_registration_path, method: :get, class: "btn btn-danger" %>
+      </div>
+      <div class="col-2">
+        <%= button_to  "ログイン", new_user_session_path, method: :get, class: "btn btn-primary" %>
+      </div>
+      <div class="col-2">
+        <%= button_to  "お試し入部", tweets_path, method: :get, class: "btn btn-success" %>
+      </div>
+    </div>
+  </div>
+</div>

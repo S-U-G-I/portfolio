@@ -9,7 +9,7 @@
           <div class="card-body">
             <h5 class="card-title">
               <% if t.user.thumbnail.blank? %>
-              <%= image_tag "thumbnail_default.jpg" %>
+              <%= image_tag "top/thumbnail_default.jpg" %>
               <% else %>
               <%= image_tag  t.user.thumbnail.url(:thumb) %>
               <% end %>

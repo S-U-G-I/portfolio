@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     get 'profile_edit', to: 'users/registrations#profile_edit', as: 'profile_edit'
     patch 'profile_update', to: 'users/registrations#profile_update', as: 'profile_update'
   end
-  root "tweets#index"
+  root "tweets#top"
   resources :users, only: [:index, :show] do
     member do
       get :following, :followers
