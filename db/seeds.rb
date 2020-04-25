@@ -19,7 +19,7 @@
 1.upto(15) do |n|
   Tweet.create!(img: open("/app/assets/images/img#{n}.jpg"),
                tweet: "test",
-               user_id: 937
+               user_id: 1333
                 )
 end
   

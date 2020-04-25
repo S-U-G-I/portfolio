@@ -35,7 +35,7 @@ class TweetsController < ApplicationController
     @tweet=Tweet.find(params[:id])
     @tweet.destroy
     flash[:notice] = "削除しました"
-    redirect_to root_path
+    redirect_to tweets_path
   end
 
   private

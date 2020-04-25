@@ -29,13 +29,13 @@
     <p class="lead">バイク、車が好きな方なら大歓迎です！</p>
     <p class="lead">あなたも入部してみませんか？</p>
     <div class="row justify-content-center">
-      <div class="col-2">
+      <div class="col-sm-3">
         <%= button_to  "入部する", new_user_registration_path, method: :get, class: "btn btn-danger" %>
       </div>
-      <div class="col-2">
+      <div class="col-sm-3">
         <%= button_to  "ログイン", new_user_session_path, method: :get, class: "btn btn-primary" %>
       </div>
-      <div class="col-2">
+      <div class="col-sm-3">
         <%= button_to  "お試し入部", tweets_path, method: :get, class: "btn btn-success" %>
       </div>
     </div>
