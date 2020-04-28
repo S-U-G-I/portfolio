@@ -8,10 +8,10 @@ set :repo_url, 'git@github.com:S-U-G-I/portfolio.git'
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-# set :deploy_to, '/var/www/my_app_name'
+ set :deploy_to, '/var/www/portfolio'
 
 # Default value for :scm is :git
-# set :scm, :git
+ set :scm, :git
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
@@ -21,7 +21,7 @@ set :repo_url, 'git@github.com:S-U-G-I/portfolio.git'
 # set :format_options, command_output: true, log_file: 'log/capistrano.log', color: :auto, truncate: :auto
 
 # Default value for :pty is false
-# set :pty, true
+ set :pty, true
 
 # Default value for :linked_files is []
 # append :linked_files, 'config/database.yml', 'config/secrets.yml'
