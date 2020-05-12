@@ -49,6 +49,8 @@ test:
 #
 production:
   <<: *default
-  database: sample_production
-  username: sample
-  password: <%= ENV['SAMPLE_DATABASE_PASSWORD'] %>
+  database: portfolio_production
+  username: portfolio
+  password: <%= ENV['PORTFOLIO_DATABASE_PASSWORD'] %>
+  socket: /tmp/mysql.sock
+  secret_key_base: b21d0cc7c9cd2ebbc63819455923bd2ca0063098cda2d30d1b2c488045c3a7f697fd3e71835f0a805847992898bd52d5a9b3c3dbcd638983075c9e3ba9587c9e

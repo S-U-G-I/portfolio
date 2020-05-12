@@ -3,7 +3,7 @@ lock '3.6.0'
 
 set :application, 'portfolio'
 set :repo_url, 'git@github.com:S-U-G-I/portfolio.git'
-
+set :linked_files, fetch(:linked_files, []).push("config/master.key")
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 

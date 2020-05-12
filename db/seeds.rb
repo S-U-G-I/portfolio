@@ -1,3 +1,10 @@
+1.upto(15) do |n|
+  Tweet.create!(img: open("app/assets/images/img#{n}.jpg"),
+               tweet: "test",
+               user_id: 1
+                )
+end
+
 60.times do |n|
   name = Faker::Games::SonicTheHedgehog.character
   email = Faker::Internet.safe_email
@@ -15,12 +22,5 @@
   followers = users[3..40]
   following.each { |followed| user.follow(followed) }
   followers.each { |follower| follower.follow(user) }
-
-1.upto(15) do |n|
-  Tweet.create!(img: open("/app/assets/images/img#{n}.jpg"),
-               tweet: "test",
-               user_id: 1333
-                )
-end
   
 
