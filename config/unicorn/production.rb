@@ -1,4 +1,5 @@
 # 上記で設定したものが適応されるよう定義
+worker_processes  $worker
 working_directory $app_dir
 stderr_path $std_log
 stdout_path $std_log
@@ -6,7 +7,7 @@ timeout $timeout
 listen  $listen
 pid $pid
 
-worker_processes = 2
+$worker = 2
 $timeout = 30
 #自分のアプリケーション名（currentがつくことに注意）
 $app_dir = "/var/www/portfolio/current"
