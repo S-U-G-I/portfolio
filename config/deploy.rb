@@ -45,8 +45,8 @@ set :log_level, :info
 
 namespace :deploy do
   desc 'Restart application'
-  task :start do
-    invoke 'unicorn:start'
+  task :restart do
+    invoke 'unicorn:restart'
   end
 
   desc 'Create database'
