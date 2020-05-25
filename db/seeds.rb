@@ -1,6 +1,6 @@
-User.create(name: test
-            email: aaa@example.com
-            password: 111111
+User.create(name: test,
+            email: aaa@example.com,
+            password: 111111,
             password_confirmation: 111111
             )
 
