@@ -1,9 +1,3 @@
-User.create(name: test,
-            email: aaa@example.com,
-            password: 111111,
-            password_confirmation: 111111
-            )
-
 1.upto(15) do |n|
   Tweet.create!(img: open("app/assets/images/img#{n}.jpg"),
                tweet: "test",
