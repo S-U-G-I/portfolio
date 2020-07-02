@@ -1,24 +1,24 @@
-# README
+ツーリングドライ部
+http://18.181.126.177/
+自分の趣味がバイクでのツーリングであり、バイクや車が趣味の友人が多いため、
+写真投稿で共有できないかと思い、アプリを作成しました。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+実装機能
+・サインイン、サインアウト
+・ログイン、ログアウト
+・画像投稿、削除
+・投稿した内容へのコメント機能
+・ユーザーマイページ
+・フォロー、フォロワー機能
+・ユーザー一覧照会
+・ページネーション
 
-Things you may want to cover:
+実装gem
+・devise(サインイン機能、ログイン機能)
+・minimagick(画像投稿、リサイズ機能)
+・kaminari(ページネーション)
+・faker(ユーザー一覧のダミーユーザー作成)
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+その他
+・JQueryを用いて、画像投稿する際のプレビュー機能実装
+・AWSで一から環境を作りデプロイしました。
